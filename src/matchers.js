@@ -24,12 +24,16 @@ var compares = function (func) {
   };
 };
 
+var toString = function (obj) {
+  return obj && typeof obj.toString === 'function' ? obj.toString() : obj;
+};
+
 module.exports = {
   toBeImmutable: function () {
     return compares(function (not, actual) {
       return {
         pass: passes(Immutable.Iterable.isIterable(actual), not),
-        message: `Expected ${actual.toString()}${not ? ' not' : ''} to be immutable`
+        message: `Expected ${toString(actual)}${not ? ' not' : ''} to be immutable`
       };
     });
   },
@@ -38,7 +42,7 @@ module.exports = {
     return compares(function (not, actual, expected) {
       return {
         pass: passes(Immutable.is(actual, expected), not),
-        message: `Expected ${actual.toString()}${not ? ' not' : ''} to equal ${expected.toString()}`
+        message: `Expected ${toString(actual)}${not ? ' not' : ''} to equal ${toString(expected)}`
       };
     });
   }
