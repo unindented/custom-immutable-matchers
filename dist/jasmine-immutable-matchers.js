@@ -88,12 +88,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	};
 
+	var toString = function toString(obj) {
+	  return obj && typeof obj.toString === 'function' ? obj.toString() : obj;
+	};
+
 	module.exports = {
 	  toBeImmutable: function toBeImmutable() {
 	    return compares(function (not, actual) {
 	      return {
 	        pass: passes(Immutable.Iterable.isIterable(actual), not),
-	        message: 'Expected ' + actual.toString() + (not ? ' not' : '') + ' to be immutable'
+	        message: 'Expected ' + toString(actual) + (not ? ' not' : '') + ' to be immutable'
 	      };
 	    });
 	  },
@@ -102,7 +106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return compares(function (not, actual, expected) {
 	      return {
 	        pass: passes(Immutable.is(actual, expected), not),
-	        message: 'Expected ' + actual.toString() + (not ? ' not' : '') + ' to equal ' + expected.toString()
+	        message: 'Expected ' + toString(actual) + (not ? ' not' : '') + ' to equal ' + toString(expected)
 	      };
 	    });
 	  }
