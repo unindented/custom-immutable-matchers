@@ -1,70 +1,56 @@
 {
-  "name":        "jasmine-immutable-matchers",
+  "name": "jasmine-immutable-matchers",
   "description": "Add a set of custom matchers for Immutable related checks.",
-
-  "version":     "0.1.1",
-  "main":        "dist/jasmine-immutable-matchers.js",
-
-  "license":     "MIT",
-
+  "version": "0.1.1",
+  "main": "dist/jasmine-immutable-matchers.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url":  "git://github.com/unindented/jasmine-immutable-matchers.git"
+    "url": "git://github.com/unindented/jasmine-immutable-matchers.git"
   },
-
   "keywords": [
     "jasmine",
     "immutable",
     "matchers"
   ],
-
   "engines": {
     "node": ">=0.12.0"
   },
-
   "scripts": {
-    "test":  "karma start --single-run",
+    "test": "karma start --single-run",
     "watch": "karma start",
-
     "build": "webpack --colors --progress --profile",
     "optim": "webpack --colors --progress --profile -p"
   },
-
   "peerDependencies": {
-    "immutable":    "*",
+    "immutable": "*",
     "jasmine-core": "^2.0"
   },
-
   "devDependencies": {
-    "immutable":                    "*",
-    "jasmine-core":                 "^2.0",
-
-    "babel-core":                   "^5.8",
-    "jshint":                       "^2.8",
-    "jscs":                         "^2.2",
-    "node-libs-browser":            "^0.5",
-    "phantomjs":                    "^1.9",
-    "webpack":                      "^1.12",
-
-    "karma":                        "^0.13.10",
-    "karma-coverage":               "^0.5.2",
-    "karma-jasmine":                "^0.3.6",
-    "karma-jasmine-ajax":           "^0.1.13",
-    "karma-sourcemap-loader":       "^0.3.5",
-    "karma-webpack":                "^1.7.0",
-
-    "karma-phantomjs-launcher":     "^0.2.0",
-    "karma-chrome-launcher":        "^0.2.0",
-    "karma-firefox-launcher":       "^0.1.6",
-    "karma-opera-launcher":         "^0.3.0",
-    "karma-safari-launcher":        "^0.1.1",
-    "karma-ie-launcher":            "^0.2.0",
-
-    "jshint-loader":                "^0.8.3",
-    "jscs-loader":                  "^0.2.0",
-    "babel-loader":                 "^5.3.2",
+    "immutable": "*",
+    "jasmine-core": "^2.0",
+    "babel-core": "^5.8",
+    "jshint": "^2.8",
+    "jscs": "^2.2",
+    "node-libs-browser": "^0.5",
+    "phantomjs": "^1.9",
+    "webpack": "^1.12",
+    "karma": "^0.13.18",
+    "karma-coverage": "^0.5.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-jasmine-ajax": "^0.1.13",
+    "karma-sourcemap-loader": "^0.3.5",
+    "karma-webpack": "^1.7.0",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-opera-launcher": "^0.3.0",
+    "karma-safari-launcher": "^0.1.1",
+    "karma-ie-launcher": "^0.2.0",
+    "jshint-loader": "^0.8.3",
+    "jscs-loader": "^0.2.0",
+    "babel-loader": "^5.3.2",
     "istanbul-instrumenter-loader": "^0.1.3",
-
-    "coveralls":                    "^2.11.4"
+    "coveralls": "^2.11.4"
   }
 }
