@@ -34,7 +34,7 @@
     "jscs": "^2.2",
     "node-libs-browser": "^0.5",
     "phantomjs": "^1.9",
-    "webpack": "^1.12",
+    "webpack": "^1.12.10",
     "karma": "^0.13.18",
     "karma-coverage": "^0.5.2",
     "karma-jasmine": "^0.3.6",
