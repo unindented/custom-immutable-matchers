@@ -29,7 +29,7 @@
   "devDependencies": {
     "immutable": "*",
     "jasmine-core": "^2.0",
-    "babel-core": "^5.8",
+    "babel-core": "^6.4.0",
     "jshint": "^2.8",
     "jscs": "^2.2",
     "node-libs-browser": "^0.5",
