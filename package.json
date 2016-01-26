@@ -54,6 +54,7 @@
     "karma-webpack": "^1.7.0",
     "node-libs-browser": "^1.0.0",
     "phantomjs": "^2.1.2",
+    "rimraf": "^2.5.1",
     "webpack": "^1.12"
   }
 }
