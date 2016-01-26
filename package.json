@@ -17,10 +17,12 @@
     "node": ">=0.12.0"
   },
   "scripts": {
+    "clean": "rimraf coverage dist",
     "test": "karma start --single-run",
     "watch": "karma start",
     "build": "webpack --colors --progress --profile",
-    "optim": "webpack --colors --progress --profile -p"
+    "optim": "webpack --colors --progress --profile -p",
+    "prepublish": "npm run clean && npm run build"
   },
   "peerDependencies": {
     "immutable": "*",
