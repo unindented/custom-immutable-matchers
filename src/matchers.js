@@ -1,30 +1,28 @@
-'use strict';
+import Immutable from 'immutable';
 
-var Immutable = require('immutable');
+const slice = Array.prototype.slice;
 
-var slice = Array.prototype.slice;
-
-var partial = function (func) {
-  var boundArgs = slice.call(arguments, 1);
+const partial = function (func) {
+  const boundArgs = slice.call(arguments, 1);
 
   return function () {
-    var args = boundArgs.concat(slice.call(arguments));
+    const args = boundArgs.concat(slice.call(arguments));
     return func.apply(this, args);
   };
 };
 
-var passes = function (a, b) {
+const passes = function (a, b) {
   return (!a ^ !b);
 };
 
-var compares = function (func) {
+const compares = function (func) {
   return {
     compare: partial(func, false),
     negativeCompare: partial(func, true)
   };
 };
 
-var toString = function (obj) {
+const toString = function (obj) {
   return obj && typeof obj.toString === 'function' ? obj.toString() : obj;
 };
 
