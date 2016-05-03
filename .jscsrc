@@ -2,8 +2,6 @@
   "excludeFiles": ["node_modules/**"],
   "fileExtensions": [".js"],
 
-  "esnext": true,
-
   "requireCurlyBraces": [
     "if",
     "else",
