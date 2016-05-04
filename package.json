@@ -43,7 +43,7 @@
     "karma": "^0.13.18",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
-    "karma-firefox-launcher": "^0.1.6",
+    "karma-firefox-launcher": "^1.0.0",
     "karma-ie-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.0",
     "karma-jasmine-ajax": "^0.1.13",
