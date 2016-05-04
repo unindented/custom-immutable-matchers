@@ -42,7 +42,7 @@
     "jshint-loader": "^0.8.3",
     "karma": "^0.13.18",
     "karma-chrome-launcher": "^1.0.1",
-    "karma-coverage": "^0.5.2",
+    "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "^0.1.6",
     "karma-ie-launcher": "^0.2.0",
     "karma-jasmine": "^1.0.0",
