@@ -1,7 +1,7 @@
 {
   "name": "jasmine-immutable-matchers",
   "description": "Add a set of custom matchers for Immutable related checks.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "dist/jasmine-immutable-matchers.js",
   "typings": "index.d.ts",
   "license": "MIT",
