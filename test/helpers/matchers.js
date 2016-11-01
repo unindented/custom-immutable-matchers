@@ -1,7 +1,5 @@
-'use strict';
-
-var matchers = require('../../src/matchers.js');
+import * as matchers from '../../src/matchers.js'
 
 beforeEach(function () {
-  jasmine.addMatchers(matchers);
-});
+  jasmine.addMatchers(matchers)
+})

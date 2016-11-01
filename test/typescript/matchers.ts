@@ -1,3 +1,6 @@
+/// <reference types="jasmine" />
+/// <reference types="../../index" />
+
 import * as Immutable from 'immutable'
 
 describe('Matchers', function () {

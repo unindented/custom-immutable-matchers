@@ -1,15 +1,12 @@
-'use strict';
-
-var path = require('path');
-
+const path = require('path')
 
 module.exports = function (options) {
-  options = options || {};
+  options = options || {}
 
-  var output = path.join(__dirname, 'dist');
+  const output = path.join(__dirname, 'dist')
 
   return {
-    debug:   !options.build,
+    debug: !options.build,
     devtool: !options.build ? 'inline-source-map' : null,
 
     entry: {
@@ -17,54 +14,37 @@ module.exports = function (options) {
     },
 
     output: {
-      path:          output,
-      pathinfo:      !options.build,
+      path: output,
+      pathinfo: !options.build,
 
-      filename:      '[name].js',
-      library:       '[name]',
+      filename: '[name].js',
+      library: '[name]',
       libraryTarget: 'umd'
     },
 
     externals: options.build ? {
       immutable: {
-        root:      'Immutable',
-        amd:       'immutable',
-        commonjs:  'immutable',
+        root: 'Immutable',
+        amd: 'immutable',
+        commonjs: 'immutable',
         commonjs2: 'immutable'
       }
     } : {},
 
     module: {
-      preLoaders: options.lint ? [
-        {
-          test:    /\.js$/,
-          exclude: /(node_modules)\//,
-          loader:  'jshint!jscs'
-        }
-      ] : [],
-
       loaders: [
         {
-          test:    /\.js$/,
+          test: /\.js$/,
           exclude: /(node_modules)\//,
-          loader:  'babel'
+          loader: 'babel'
         }
       ],
 
       postLoaders: options.cov ? [{
-        test:    /\.js$/,
+        test: /\.js$/,
         exclude: /(test|node_modules)\//,
-        loader:  'istanbul-instrumenter'
+        loader: 'istanbul-instrumenter'
       }] : []
-    },
-
-    jshint: {
-      emitErrors: true
-    },
-
-    jscs: {
-      emitErrors: true
     }
-
-  };
-};
+  }
+}
