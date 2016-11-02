@@ -23,6 +23,30 @@ expect(Immutable.Map()).toBeImmutable()
 ```
 
 
+### ES2015
+
+If you are using the new module syntax, `import` all exported matchers:
+
+```js
+import * as matchers from 'jasmine-immutable-matchers';
+
+describe('My suite', function () {
+  beforeEach(function () {
+    jasmine.addMatchers(matchers);
+  });
+
+  it('passes if the object is immutable', function () {
+    expect(Immutable.Map()).toBeImmutable()
+  });
+
+  it('passes if the immutable objects are equal', function () {
+    expect(Immutable.Map({a: 1})).toEqualImmutable(Immutable.Map({a: 1}))
+  });
+});
+```
+
+Note that `jasmine-immutable-matchers` does not have a default export!
+
 ### AMD/CommonJS
 
 If you are using AMD or CommonJS, `require` normally:
