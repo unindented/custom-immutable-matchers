@@ -12,7 +12,7 @@ const partial = function (func) {
 }
 
 const passes = function (a, b) {
-  return (!a ^ !b)
+  return !!(!a ^ !b)
 }
 
 const compares = function (func) {
