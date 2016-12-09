@@ -25,14 +25,11 @@
     "optim": "webpack --colors --progress --profile -p",
     "prepublish": "npm run clean && npm run build"
   },
-  "dependencies": {
-    "@types/jasmine": "^2.5.37"
-  },
   "peerDependencies": {
-    "immutable": "*",
-    "jasmine-core": "^2.0"
+    "immutable": "*"
   },
   "devDependencies": {
+    "@types/jasmine": "^2.5.37",
     "babel-core": "^6.18.0",
     "babel-loader": "^6.2.7",
     "babel-preset-es2015": "^6.18.0",
