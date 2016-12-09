@@ -1,8 +1,2 @@
-/// <reference types="jasmine"/>
-
-declare namespace jasmine {
-    interface Matchers {
-        toBeImmutable(): boolean;
-        toEqualImmutable(actual: any): boolean;
-    }
-}
+export function toBeImmutable(): boolean
+export function toEqualImmutable(actual: any): boolean
