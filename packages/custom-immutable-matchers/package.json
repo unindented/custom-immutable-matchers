@@ -1,0 +1,33 @@
+{
+  "name": "custom-immutable-matchers",
+  "description": "Add a set of custom matchers for Immutable related checks.",
+  "version": "1.3.0",
+  "main": "dist/custom-immutable-matchers.js",
+  "typings": "index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unindented/custom-immutable-matchers.git"
+  },
+  "keywords": [
+    "jasmine",
+    "jest",
+    "immutable",
+    "matchers"
+  ],
+  "scripts": {
+    "clean:dist": "rimraf dist",
+    "clean": "run-p clean:*",
+    "build": "webpack --colors --progress --profile --config config/webpack/common.js",
+    "optim": "webpack --colors --progress --profile -p --config config/webpack/common.js",
+    "prepublish": "run-s clean build"
+  },
+  "peerDependencies": {
+    "immutable": "*"
+  },
+  "devDependencies": {
+    "npm-run-all": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.14.0"
+  }
+}

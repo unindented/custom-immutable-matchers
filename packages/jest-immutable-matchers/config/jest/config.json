@@ -1,0 +1,12 @@
+{
+  "setupTestFrameworkScriptFile": "<rootDir>/tests/helpers/index.js",
+  "testRegex": "<rootDir>/tests/matchers/.*$",
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "index.js"
+  ],
+  "coverageReporters": [
+    "text",
+    "text-summary"
+  ]
+}

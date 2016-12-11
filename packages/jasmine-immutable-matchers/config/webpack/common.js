@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = function (options) {
   options = options || {}
 
-  const output = path.join(__dirname, 'dist')
+  const output = path.join(__dirname, '../../dist')
 
   return {
     debug: !options.build,
@@ -40,11 +40,13 @@ module.exports = function (options) {
         }
       ],
 
-      postLoaders: options.cov ? [{
-        test: /\.js$/,
-        exclude: /(test|node_modules)\//,
-        loader: 'istanbul-instrumenter'
-      }] : []
+      postLoaders: !options.build ? [
+        {
+          test: /\.js$/,
+          exclude: /(test|node_modules)\//,
+          loader: 'istanbul-instrumenter'
+        }
+      ] : []
     }
   }
 }

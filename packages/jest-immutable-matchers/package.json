@@ -1,0 +1,43 @@
+{
+  "name": "jest-immutable-matchers",
+  "description": "Add a set of custom matchers for Immutable related checks.",
+  "version": "1.3.0",
+  "main": "dist/jest-immutable-matchers.js",
+  "typings": "index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unindented/custom-immutable-matchers.git"
+  },
+  "keywords": [
+    "jest",
+    "immutable",
+    "matchers"
+  ],
+  "scripts": {
+    "clean:coverage": "rimraf coverage",
+    "clean:dist": "rimraf dist",
+    "clean": "run-p clean:*",
+    "test:tsc": "node tests/typescript/index.js",
+    "test:jest": "jest --config config/jest/config.json",
+    "test": "run-p test:*",
+    "watch:jest": "jest --watch --config config/jest/config.json",
+    "watch": "run-p watch:*",
+    "build": "webpack --colors --progress --profile --config config/webpack/build.js",
+    "optim": "webpack --colors --progress --profile -p --config config/webpack/build.js",
+    "prepublish": "run-s clean build"
+  },
+  "peerDependencies": {
+    "jest": "*",
+    "immutable": "*"
+  },
+  "devDependencies": {
+    "@types/jest": "^16.0.1",
+    "babel-jest": "^17.0.2",
+    "custom-immutable-matchers": "^1.3.0",
+    "jest": "^17.0.3",
+    "npm-run-all": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.14.0"
+  }
+}

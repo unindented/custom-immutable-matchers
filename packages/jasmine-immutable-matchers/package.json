@@ -1,0 +1,48 @@
+{
+  "name": "jasmine-immutable-matchers",
+  "description": "Add a set of custom matchers for Immutable related checks.",
+  "version": "1.3.0",
+  "main": "dist/jasmine-immutable-matchers.js",
+  "typings": "index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unindented/custom-immutable-matchers.git"
+  },
+  "keywords": [
+    "jasmine",
+    "immutable",
+    "matchers"
+  ],
+  "scripts": {
+    "clean:coverage": "rimraf coverage",
+    "clean:dist": "rimraf dist",
+    "clean": "run-p clean:*",
+    "test:tsc": "node tests/typescript/index.js",
+    "test:karma": "karma start config/karma/config.js --single-run",
+    "test": "run-p test:*",
+    "watch:karma": "karma start config/karma/config.js",
+    "watch": "run-p watch:*",
+    "build": "webpack --colors --progress --profile --config config/webpack/build.js",
+    "optim": "webpack --colors --progress --profile -p --config config/webpack/build.js",
+    "prepublish": "run-s clean build"
+  },
+  "peerDependencies": {
+    "jasmine": "*",
+    "immutable": "*"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.38",
+    "custom-immutable-matchers": "^1.3.0",
+    "istanbul-instrumenter-loader": "^1.1.0",
+    "karma": "^1.3.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
+    "npm-run-all": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.14.0"
+  }
+}

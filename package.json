@@ -1,55 +1,31 @@
 {
-  "name": "jasmine-immutable-matchers",
-  "description": "Add a set of custom matchers for Immutable related checks.",
-  "version": "1.2.1",
-  "main": "dist/jasmine-immutable-matchers.js",
-  "typings": "index.d.ts",
+  "private": true,
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/unindented/jasmine-immutable-matchers.git"
-  },
-  "keywords": [
-    "jasmine",
-    "immutable",
-    "matchers"
-  ],
   "scripts": {
-    "clean": "rimraf coverage dist",
     "test:lint": "eslint .",
-    "test:tsc": "node test/typescript/index.js",
-    "test:karma": "karma start --single-run",
-    "test": "npm run test:lint && npm run test:tsc && npm run test:karma",
-    "watch": "karma start",
-    "build": "webpack --colors --progress --profile",
-    "optim": "webpack --colors --progress --profile -p",
-    "prepublish": "npm run clean && npm run build"
-  },
-  "peerDependencies": {
-    "immutable": "*"
+    "test:unit": "lerna run test",
+    "test": "run-p test:*",
+    "build": "lerna run build",
+    "optim": "lerna run optim",
+    "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
-    "babel-core": "^6.18.0",
-    "babel-loader": "^6.2.7",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.18.0",
-    "coveralls": "^2.11.14",
-    "eslint": "^3.9.1",
+    "eslint": "^3.12.0",
     "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "immutable": "^3.8.1",
-    "istanbul-instrumenter-loader": "^1.0.0",
     "jasmine-core": "^2.5.2",
-    "karma": "^1.3.0",
-    "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.2",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.8.0",
-    "phantomjs-prebuilt": "^2.1.13",
+    "lerna": "2.0.0-beta.30",
+    "npm-run-all": "^3.1.2",
+    "phantomjs-prebuilt": "^2.1.14",
     "rimraf": "^2.5.4",
-    "typescript": "^2.0.6",
+    "typescript": "^2.1.4",
     "typescript-definition-tester": "^0.0.5",
-    "webpack": "^1.13.1"
+    "webpack": "^1.14.0"
   }
 }

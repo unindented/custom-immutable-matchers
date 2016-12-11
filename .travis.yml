@@ -1,17 +1,3 @@
 language: node_js
 node_js:
   - '6'
-
-env:
-  - COV=true
-
-deploy:
-  provider: npm
-  email: unindented@gmail.com
-  api_key:
-    secure: PhTWs8Lrq7JBBjvtV2YA2HLZ9cc/XqgotTOoMSlwldfYAhcOHHAK0eXoiLcW1dOdb73IIPxLlKpY0b74HKRwUmkreamvVFzqCc1UW6/MGcGYe60JZn72AyfbNemOUtH0FMKXxC34C1ex1DRrFelD3j/iznYIEkugM++LHEbs5LIFlvKk0zFZtzIu782od/+W1EruOlTEgxoMk5Yk1PoQV1kOcbSDPmeSaSt+EypCsUa44dT43bDIl2WtAXjfnr1nRjvTnShUfE9tXzXCS2U6dEB8ZBea4EN8t/JNfCml2dv3eDqkkJXx7nhJ42Y0y5J0M0TYQ7Vg4hG3gByhkL00dOoBXP/6DECpI0H+/5Hym599bWsPjMFVHRqwBr5iyay9fAxbUGRZH7Yr1VYHxZ9c2/BoMzkBqgGv9spKjpAhxxLdr3etUtRYmZ5RYzLcl3YfT8ihJ+fxLxFnGoIDJQ5ihX6S3CY2FP2CA/vP3i99v1sS5ldg24oTNiyinLA/AYo/SurD/spYSnOJ9GQtvB0NLtQOFVi4IWvirvZeNr1LBfxTkS8zIPt1vOLdZY3i/i8ukWv/8EiViejjzhP6cgVLq9QdK0uKl9QFNNYrKcuaP7ELKdAJh5Hphhur5jP90cy/04vvkZ4ndKLIkPztY+TkEDms9eFUgyIVwAvVlDXILIg=
-  on:
-    tags: true
-
-after_script:
-  - find ./coverage -name lcov.info -exec cat {} \; | ./node_modules/coveralls/bin/coveralls.js

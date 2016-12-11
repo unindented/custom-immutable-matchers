@@ -1,9 +1,9 @@
 const path = require('path')
-const webpackConfig = require('./webpack.test')
-const webpackServerConfig = require('./webpack.server')
+const webpackConfig = require('../webpack/test')
+const webpackServerConfig = require('../webpack/server')
 
-const basePath = __dirname
-const coveragePath = path.join(__dirname, 'coverage')
+const basePath = path.resolve(__dirname, '../..')
+const coveragePath = path.resolve(basePath, 'coverage')
 
 module.exports = function (config) {
   config.set({
@@ -16,27 +16,26 @@ module.exports = function (config) {
 
     files: [
       {pattern: 'index.js', watched: true, included: false, served: false},
-      {pattern: 'test/**/*.js', watched: true, included: true, served: true}
+      {pattern: 'tests/**/*.js', watched: true, included: true, served: true}
     ],
 
     exclude: [
       'coverage/**/*.*',
-      'test/typescript/**/*.*'
+      'tests/typescript/**/*.*'
     ],
 
     preprocessors: {
-      'test/**/*.js': ['webpack']
+      'tests/**/*.js': ['webpack']
     },
 
     browsers: ['PhantomJS'],
     frameworks: ['jasmine'],
-    reporters: process.env.COV ? ['dots', 'coverage'] : ['dots'],
+    reporters: ['dots', 'coverage'],
 
     coverageReporter: {
       reporters: [
         {type: 'text', dir: coveragePath},
-        {type: 'lcov', dir: coveragePath},
-        {type: 'html', dir: coveragePath}
+        {type: 'text-summary', dir: coveragePath}
       ]
     }
   })

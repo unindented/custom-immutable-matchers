@@ -1,4 +1,4 @@
-import * as matchers from '../../src/matchers.js'
+import * as matchers from 'custom-immutable-matchers'
 
 beforeEach(function () {
   jasmine.addMatchers(matchers)
