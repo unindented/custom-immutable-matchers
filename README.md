@@ -8,6 +8,18 @@ The matchers provide custom error messages that try to be as helpful as possible
 ## List of matchers
 
 * toBeImmutable
+* toBeIterableImmutable
+* toBeKeyedImmutable
+* toBeIndexedImmutable
+* toBeAssociativeImmutable
+* toBeOrderedImmutable
+* toBeImmutableList
+* toBeImmutableMap
+* toBeImmutableOrderedMap
+* toBeImmutableSet
+* toBeImmutableOrderedSet
+* toBeImmutableStack
+* toBeImmutableSeq
 * toEqualImmutable
 
 
