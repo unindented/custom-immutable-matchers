@@ -1,6 +1,12 @@
 # jasmine-immutable-matchers [![Version](https://img.shields.io/npm/v/jasmine-immutable-matchers.svg)](https://www.npmjs.com/package/jasmine-immutable-matchers)
 
 
+## List of matchers
+
+* toBeImmutable
+* toEqualImmutable
+
+
 ## Installation
 
 Just run:
