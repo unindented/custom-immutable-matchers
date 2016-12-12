@@ -18,6 +18,43 @@ Load these matchers in a `beforeEach` block, and then use them like any other ma
 expect(Immutable.Map()).toBeImmutable()
 ```
 
+### TypeScript
+
+This package includes the necessary declarations for TypeScript. Just make sure they get loaded in your project, for example by adding the package name to the `types` field in your `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "types": [
+      "jasmine",
+      "jasmine-immutable-matchers"
+    ]
+  }
+}
+```
+
+Then just load the matchers at runtime in your tests:
+
+```js
+import * as matchers from 'jasmine-immutable-matchers';
+
+describe('My suite', function () {
+  beforeEach(function () {
+    jasmine.addMatchers(matchers);
+  });
+
+  it('passes if the object is immutable', function () {
+    expect(Immutable.Map()).toBeImmutable();
+  });
+
+  it('passes if the immutable objects are equal', function () {
+    expect(Immutable.Map({a: 1})).toEqualImmutable(Immutable.Map({a: 1}));
+  });
+});
+```
+
 ### ES2015
 
 If you are using the new module syntax, `import` all exported matchers:
