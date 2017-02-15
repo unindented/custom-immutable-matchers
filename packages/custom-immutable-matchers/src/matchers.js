@@ -88,6 +88,10 @@ export const toBeImmutableSeq = comparator((actual) => {
 
 export const toEqualImmutable = comparator((actual, expected) => {
   const pass = Immutable.is(actual, expected)
-  const message = `Expected ${toString(actual)}${pass ? ' not' : ''} to equal ${toString(expected)}`
+  const message = `Expected
+${toString(actual)}
+${pass ? ' not' : ''} to equal
+${toString(expected)}
+`
   return {pass, message}
 })
