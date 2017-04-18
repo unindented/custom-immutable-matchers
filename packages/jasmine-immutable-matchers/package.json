@@ -28,7 +28,7 @@
     "prepublish": "run-s clean build"
   },
   "peerDependencies": {
-    "jasmine": "*",
+    "jasmine-core": "*",
     "immutable": "*"
   },
   "devDependencies": {
