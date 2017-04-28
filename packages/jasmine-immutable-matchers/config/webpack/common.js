@@ -6,8 +6,7 @@ module.exports = function (options) {
   const output = path.join(__dirname, '../../dist')
 
   return {
-    debug: !options.build,
-    devtool: !options.build ? 'inline-source-map' : null,
+    devtool: !options.build ? 'inline-source-map' : false,
 
     entry: {
       'jasmine-immutable-matchers': './index'
@@ -32,21 +31,13 @@ module.exports = function (options) {
     } : {},
 
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.js$/,
           exclude: /(node_modules)\//,
-          loader: 'babel'
+          loader: 'babel-loader'
         }
-      ],
-
-      postLoaders: !options.build ? [
-        {
-          test: /\.js$/,
-          exclude: /(test|node_modules)\//,
-          loader: 'istanbul-instrumenter'
-        }
-      ] : []
+      ]
     }
   }
 }

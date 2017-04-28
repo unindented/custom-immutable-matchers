@@ -1,7 +1,7 @@
 /// <reference types="jasmine"/>
 
 declare namespace jasmine {
-  interface Matchers {
+  interface Matchers<T> {
     toBeImmutable(): boolean
     toBeIterableImmutable(): boolean
     toBeKeyedImmutable(): boolean

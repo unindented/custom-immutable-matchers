@@ -2,7 +2,6 @@ const path = require('path')
 const output = path.join(__dirname, '../../dist')
 
 module.exports = {
-  debug: false,
   devtool: false,
 
   entry: {
@@ -28,11 +27,11 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)\//,
-        loader: 'babel'
+        loader: 'babel-loader'
       }
     ]
   }

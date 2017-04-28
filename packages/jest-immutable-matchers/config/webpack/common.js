@@ -6,8 +6,7 @@ module.exports = function (options) {
   const output = path.join(__dirname, '../../dist')
 
   return {
-    debug: !options.build,
-    devtool: !options.build ? 'inline-source-map' : null,
+    devtool: !options.build ? 'inline-source-map' : false,
 
     entry: {
       'jest-immutable-matchers': './index'
@@ -32,11 +31,11 @@ module.exports = function (options) {
     } : {},
 
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.js$/,
           exclude: /(node_modules)\//,
-          loader: 'babel'
+          loader: 'babel-loader'
         }
       ]
     }

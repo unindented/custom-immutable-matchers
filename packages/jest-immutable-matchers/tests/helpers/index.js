@@ -1,5 +1,3 @@
 import * as matchers from '../..'
 
-beforeEach(function () {
-  jest.addMatchers(matchers)
-})
+jest.addMatchers(matchers)
