@@ -20,7 +20,7 @@
     "clean": "run-p clean:*",
     "build": "webpack --colors --progress --profile --config config/webpack/common.js",
     "optim": "webpack --colors --progress --profile -p --config config/webpack/common.js",
-    "prepublish": "run-s clean build"
+    "prepublishOnly": "run-s clean build"
   },
   "peerDependencies": {
     "immutable": ">=3.0.0"

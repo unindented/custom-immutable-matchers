@@ -25,7 +25,7 @@
     "watch": "run-p watch:*",
     "build": "webpack --colors --progress --profile --config config/webpack/build.js",
     "optim": "webpack --colors --progress --profile -p --config config/webpack/build.js",
-    "prepublish": "run-s clean build"
+    "prepublishOnly": "run-s clean build"
   },
   "peerDependencies": {
     "immutable": ">=3.0.0",
