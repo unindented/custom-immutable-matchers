@@ -29,13 +29,13 @@
   },
   "peerDependencies": {
     "immutable": "*",
-    "jest": "*"
+    "jest": "^21"
   },
   "devDependencies": {
     "@types/jest": "^19.2.2",
     "babel-jest": "^19.0.0",
     "custom-immutable-matchers": "^1.5.0",
-    "jest": "^19.0.2",
+    "jest": "^21",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
     "webpack": "^2.4.1"
