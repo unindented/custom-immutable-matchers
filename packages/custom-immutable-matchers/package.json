@@ -23,11 +23,11 @@
     "prepublish": "run-s clean build"
   },
   "peerDependencies": {
-    "immutable": "*"
+    "immutable": ">=3.0.0"
   },
   "devDependencies": {
-    "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.1",
-    "webpack": "^2.4.1"
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.10.0"
   }
 }

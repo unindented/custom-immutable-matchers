@@ -1,4 +1,6 @@
 {
+  "rootDir": "../..",
+  "roots": ["<rootDir>/tests/matchers/"],
   "setupTestFrameworkScriptFile": "<rootDir>/tests/helpers/index.js",
-  "testRegex": "<rootDir>/tests/matchers/.*$"
+  "testRegex": ".*\\.js"
 }

@@ -28,16 +28,16 @@
     "prepublish": "run-s clean build"
   },
   "peerDependencies": {
-    "immutable": "*",
-    "jest": "^21"
+    "immutable": ">=3.0.0",
+    "jest": ">=21.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^19.2.2",
-    "babel-jest": "^19.0.0",
+    "@types/jest": "^22.0.1",
+    "babel-jest": "^22.1.0",
     "custom-immutable-matchers": "^1.5.0",
-    "jest": "^21",
-    "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.1",
-    "webpack": "^2.4.1"
+    "jest": "^22.1.2",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.10.0"
   }
 }

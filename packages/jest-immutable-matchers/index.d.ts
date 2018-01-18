@@ -1,7 +1,7 @@
 /// <reference types="jest"/>
 
 declare namespace jest {
-  interface Matchers {
+  interface Matchers<R> {
     toBeImmutable(): boolean
     toBeIterableImmutable(): boolean
     toBeKeyedImmutable(): boolean

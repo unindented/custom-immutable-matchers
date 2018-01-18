@@ -28,21 +28,21 @@
     "prepublish": "run-s clean build"
   },
   "peerDependencies": {
-    "immutable": "*",
-    "jasmine-core": "*"
+    "immutable": ">=3.0.0",
+    "jasmine-core": ">=2.0.0"
   },
   "devDependencies": {
-    "@types/jasmine": "^2.5.47",
+    "@types/jasmine": "^2.8.4",
     "custom-immutable-matchers": "^1.5.0",
-    "istanbul-instrumenter-loader": "^2.0.0",
-    "karma": "^1.6.0",
+    "istanbul-instrumenter-loader": "^3.0.0",
+    "karma": "^2.0.0",
     "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.1.0",
+    "karma-jasmine": "^1.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^2.0.3",
-    "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.1",
-    "webpack": "^2.4.1"
+    "karma-webpack": "^2.0.9",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.10.0"
   }
 }
