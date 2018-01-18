@@ -1,4 +1,4 @@
-# Custom Immutable Matchers for custom and Jest [![Version](https://img.shields.io/npm/v/custom-immutable-matchers.svg)](https://www.npmjs.com/package/custom-immutable-matchers) [![Build Status](https://img.shields.io/travis/unindented/custom-immutable-matchers.svg)](http://travis-ci.org/unindented/custom-immutable-matchers)
+# Custom Immutable Matchers for Jasmine and Jest [![Version](https://img.shields.io/npm/v/custom-immutable-matchers.svg)](https://www.npmjs.com/package/custom-immutable-matchers) [![Build Status](https://img.shields.io/travis/unindented/custom-immutable-matchers.svg)](http://travis-ci.org/unindented/custom-immutable-matchers)
 
 Adds a set of custom matchers for [Immutable](https://facebook.github.io/immutable-js/) related checks.
 
