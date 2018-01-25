@@ -18,3 +18,5 @@ declare namespace jest {
     toEqualImmutable(actual: any): boolean
   }
 }
+
+declare module "jest-immutable-matchers"

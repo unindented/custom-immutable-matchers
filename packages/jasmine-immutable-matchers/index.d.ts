@@ -18,3 +18,5 @@ declare namespace jasmine {
     toEqualImmutable(actual: any): boolean
   }
 }
+
+declare module "jasmine-immutable-matchers"
