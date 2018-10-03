@@ -60,7 +60,7 @@ import * as matchers from 'jest-immutable-matchers';
 
 describe('My suite', function () {
   beforeEach(function () {
-    jest.addMatchers(matchers);
+    expect.extend(matchers);
   });
 
   it('passes if the object is immutable', function () {
@@ -82,7 +82,7 @@ import * as matchers from 'jest-immutable-matchers';
 
 describe('My suite', function () {
   beforeEach(function () {
-    jest.addMatchers(matchers);
+    expect.extend(matchers);
   });
 
   it('passes if the object is immutable', function () {
@@ -106,7 +106,7 @@ var matchers = require('jest-immutable-matchers');
 
 describe('My suite', function () {
   beforeEach(function () {
-    jest.addMatchers(matchers);
+    expect.extend(matchers);
   });
 
   it('passes if the object is immutable', function () {
@@ -128,7 +128,7 @@ var matchers = window['jest-immutable-matchers'];
 
 describe('My suite', function () {
   beforeEach(function () {
-    jest.addMatchers(matchers);
+    expect.extend(matchers);
   });
 
   it('passes if the object is immutable', function () {
