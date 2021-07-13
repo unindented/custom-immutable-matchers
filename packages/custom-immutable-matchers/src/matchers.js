@@ -1,8 +1,6 @@
 import * as Immutable from 'immutable'
 
-const comparator = (func) => () => ({
-  compare: func
-})
+const comparator = (func) => func
 
 const toString = function (obj) {
   return obj && typeof obj.toString === 'function' ? obj.toString() : obj
