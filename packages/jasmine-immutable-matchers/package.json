@@ -35,7 +35,7 @@
     "@types/jasmine": "^2.8.4",
     "custom-immutable-matchers": "^2.0.0",
     "istanbul-instrumenter-loader": "^3.0.0",
-    "karma": "^2.0.0",
+    "karma": "^6.4.1",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
