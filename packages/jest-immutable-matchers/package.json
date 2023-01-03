@@ -35,9 +35,9 @@
     "@types/jest": "^22.0.1",
     "babel-jest": "^22.1.0",
     "custom-immutable-matchers": "^3.0.0",
-    "jest": "^22.1.2",
+    "jest": "^29.3.1",
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^5.75.0"
   }
 }
